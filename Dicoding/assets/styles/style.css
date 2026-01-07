@@ -16,6 +16,26 @@ body {
   padding: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+}
+
 .fancy {
   font-weight: bold;
   text-shadow: 2px 2px 4px #aaa;
@@ -57,16 +77,24 @@ nav a {
   color: white;
 }
 
+/* menerapkan flexbox */
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
 nav li {
-  display: inline;
-  margin-right: 6px;
+  life-style-type: none;
+  /* margin-right: 6px; */
   font-size: 18px;
   list-style-type: none;
 }
 
 main {
   padding: 20px;
-  overflow: auto;
+  /* overflow: auto; */
+  display: flex;
 }
 
 article img {
@@ -170,11 +198,6 @@ h3 {
   border-radius: 6px;
 }
 
-.contact-person {
-  text-decoration: none;
-  font-weight: bold;
-}
-
 blockquote::before,
 blockquote::after {
   content: '"';
@@ -191,8 +214,13 @@ blockquote {
   text-align: center;
 }
 
-.contact a {
+.contact-person {
   text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a {
+  list-style-type: none;
 }
 .contact a:hover {
   text-decoration: underline;
@@ -212,6 +240,9 @@ footer {
 #content {
   float: left;
   width: 75%;
+  /* display: flex; */
+  /* flex-flow: nowrap;
+  gap: 1rem 2rem; */
 }
 
 aside {
