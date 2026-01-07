@@ -1,0 +1,230 @@
+/* * {
+  border: 1px solid red;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: inline;
+}
+
+body {
+  font-family: Quicksand, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.fancy {
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #aaa;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.jumbotron {
+  background-color: lightblue;
+  padding: 40px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.navbar-header {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.navbar-header:hover {
+  color: red;
+}
+
+nav {
+  background-color: #00a2c6;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: white;
+}
+
+nav li {
+  display: inline;
+  margin-right: 6px;
+  font-size: 18px;
+  list-style-type: none;
+}
+
+main {
+  padding: 20px;
+  overflow: auto;
+}
+
+article img {
+  border-radius: 4px;
+}
+
+article table {
+  border-radius: 4px;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* desain container coming soon content */
+
+.container {
+  height: 300px;
+  border: 1px solid #aaa3a3ff;
+  margin-top: 24px;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-content {
+  text-align: center;
+  line-height: 230px;
+  width: 33%;
+  height: 100%;
+  background-color: red;
+  float: left;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.center-content {
+  text-align: center;
+  line-height: 230px;
+  width: 33%;
+  height: 100%;
+  background-color: green;
+  float: left;
+}
+
+.right-content {
+  text-align: center;
+  line-height: 230px;
+  width: 33%;
+  height: 100%;
+  background-color: blue;
+  float: left;
+  border-radius: 0px 8px 8px 0px;
+}
+
+/* desain box flex halo */
+.box {
+  height: 260px;
+  align-items: center;
+}
+
+.flex {
+  padding: 10px;
+  border-radius: 8px;
+  text-align: end;
+  background-color: yellow;
+  display: flex;
+  gap: 8px;
+}
+
+.box1 {
+  background-color: grey;
+  text-align: start;
+  line-height: 50px;
+  flex-basis: 400px;
+  border-radius: 8px;
+}
+
+.box2 {
+  background-color: lime;
+  text-align: center;
+  line-height: 250px;
+  flex-basis: 200px;
+}
+
+.box3 {
+  background-color: grey;
+  text-align: end;
+  line-height: 460px;
+  flex-basis: 200px;
+}
+/* end : desain box flex halo */
+
+h2,
+h3 {
+  color: #00a2c6;
+  margin-top: 0px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.contact-person {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+blockquote::before,
+blockquote::after {
+  content: '"';
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+blockquote {
+  padding: 10px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.contact a {
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+input {
+  padding: 5px;
+}
+
+footer {
+  padding: 14px;
+  color: white;
+  background-color: #00a2c6;
+  text-align: center;
+}
+
+#content {
+  float: left;
+  width: 75%;
+}
+
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* mengatur tampilan screen agar menjadi lebih responsif pada tampilan mobile */
+@media screen and (max-width: 1000px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}

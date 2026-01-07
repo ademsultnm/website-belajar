@@ -3,36 +3,34 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="assets/style/style.css">
+      <link rel="stylesheet" href="assets/styles/style.css">
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Belleza&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+      </style>
       <title>Dicoding</title>
    </head>
 
    <body>
-      <aside>
-         <article>
-            <h1>Bandung</h1>
-            <p>Kota metropolitan terbesar di Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
-            <nav>
-               <!-- dapat diakes melalui link berdasarkan id nya -->
-               <ul>
-                  <li><a href="#sejarah" class="navbar-header">Sejarah</a></li>
-                  <li><a href="#geografis" class="navbar-header">Geografis</a></li>
-                  <li><a href="#farm-house" class="navbar-header">Farm House Lembang</a></li>
-                  <li><a href="#observatorium" class="navbar-header">Observatorium Bosscha</a></li>
-               </ul>
-            </nav>
-            <header>
-               <h2>Kota Bandung</h2>
-               <p>Kota Kembang Paris van Java</p>
-               <figure>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Lambang_Kota_Bandung.svg/2409px-Lambang_Kota_Bandung.svg.png" alt="Lambang Kota Bandung" width="300px">
-                  <figcaption>Lambang Kota Bandung</figcaption>
-               </figure>
-            </header>
+      <header>
+         <div class="jumbotron">
+            <h1 class="fancy">Bandung</h1>
+            <p style="font-size: 18px">Kota metropolitan terbesar di Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.</p>
+         </div>
+         <nav>
+            <!-- dapat diakes melalui link berdasarkan id nya -->
+            <ul>
+               <li><a href="#sejarah" class="navbar-header">Sejarah</a></li>
+               <li><a href="#geografis" class="navbar-header">Geografis</a></li>
+               <li><a href="#wisata" class="navbar-header">wisata</a></li>
+            </ul>
+         </nav>
+      </header>
 
-            <section>
-               <h2 id="sejarah">Sejarah</h2>
-               <img src="assets/image/history.jpg" alt="Sejarah Bandung" width="300px">
+      <main>
+         <div id="content">
+            <article id="sejarah" class="card">
+               <h2 class="judul-article">Sejarah</h2>
+               <img src="./image/history.jpg" alt="Sejarah Bandung" width="300px" class="featured-image">
                <p>
                   Kata Bandung berasal dari kata bendung atau bendungan karena terbendungnya sungai Citarum oleh
                   lava Gunung Tangkuban Parahu yang lalu membentuk telaga. Legenda yang diceritakan oleh
@@ -41,7 +39,7 @@
                   digunakan oleh Bupati Bandung, R.A. Wiranatakusumah II, untuk melayari Ci Tarum dalam mencari
                   tempat kedudukan kabupaten yang baru untuk menggantikan ibu kota yang lama di Dayeuhkolot.
                </p>
-         
+            
                <p>
                   Berdasarkan filosofi Sunda, kata Bandung juga berasal dari kalimat Nga-Bandung-an Banda
                   Indung, yang merupakan kalimat sakral dan luhur karena mengandung nilai ajaran Sunda.
@@ -50,11 +48,11 @@
                   banda adalah harta. Indung berarti Ibu atau Bumi, disebut juga sebagai Ibu Pertiwi tempat
                   Banda berada.
                </p>
-            </section>
-         
-            <section>
-               <h2 id="geografis">Geografis</h2>
-               <img src="assets/image/geografis.jpg" alt="Geografis Bandung" width="300px">
+            </article>
+            
+            <article id="geografis" class="card">
+               <h2>Geografis</h2>
+               <img src="./image/geografis.jpg" alt="Geografis Bandung" width="300px" class="featured-image">
                <p>
                   Kota Bandung dikelilingi oleh pegunungan, sehingga bentuk morfologi wilayahnya bagaikan sebuah
                   mangkok raksasa, secara geografis kota ini terletak di tengah-tengah provinsi Jawa Barat,
@@ -62,38 +60,34 @@
                   di sebelah utara dengan ketinggian 1.050 meter di atas permukaan laut dan sebelah selatan
                   merupakan kawasan rendah dengan ketinggian 675 meter di atas permukaan laut.
                </p>
-         
+            
                <p>
                   Kota Bandung dialiri dua sungai utama, yaitu Sungai Cikapundung dan Sungai Citarum beserta
                   anak-anak sungainya yang pada umumnya mengalir ke arah selatan dan bertemu di Sungai Citarum.
                   Dengan kondisi yang demikian, Bandung selatan sangat rentan terhadap masalah banjir terutama
                   pada musim hujan.
                </p>
-            </section>
-         
-            <section>
-               <h2 id="wisata">Wisata</h2>
+            </article>
+            
+            <article id="wisata" class="card">
+               <h2>Wisata</h2>
                <p>
                   Sejak dibukanya Jalan Tol Cipularang, kota Bandung telah menjadi tujuan utama dalam menikmati
                   liburan akhir pekan terutama dari masyarakat yang berasal dari Jakarta sekitarnya. Selain
                   menjadi kota wisata belanja, kota Bandung juga dikenal dengan sejumlah besar bangunan lama
                   berarsitektur peninggalan Belanda.
                </p>
-            </section>
-         
-            <section>
+
                <h2 id="farm-house">Farm House Lembang</h2>
-               <img src="assets/image/farm-house.jpg" alt="Farm House Lembang" width="300px">
+               <img src="./image/farm-house.jpg" alt="Farm House Lembang" width="300px" class="featured-image">
                <p>Kota Bandung dikelilingi oleh pegunungan, sehingga bentuk morfologi wilayahnya bagaikan sebuah
-                  mangkok raksasa,[9] secara geografis kota ini terletak di tengah-tengah provinsi Jawa Barat,
-                  serta berada pada ketinggian ±768 m di atas permukaan laut, dengan titik tertinggi di berada
-                  di sebelah utara dengan ketinggian 1.050 meter di atas permukaan laut dan sebelah selatan
-                  merupakan kawasan rendah dengan ketinggian 675 meter di atas permukaan laut.</p>
-            </section>
-         
-            <section>
+               mangkok raksasa,[9] secara geografis kota ini terletak di tengah-tengah provinsi Jawa Barat,
+               serta berada pada ketinggian ±768 m di atas permukaan laut, dengan titik tertinggi di berada
+               di sebelah utara dengan ketinggian 1.050 meter di atas permukaan laut dan sebelah selatan
+               merupakan kawasan rendah dengan ketinggian 675 meter di atas permukaan laut.</p>
+
                <h2 id="observatorium">Observatorium Bosscha</h2>
-               <img src="assets/image/bosscha.jpg" alt="Observatorium Bosscha" width="300px">
+               <img src="./image/bosscha.jpg" alt="Observatorium Bosscha" width="300px" class="featured-image">
                <p>Memiliki beberapa teleskop, antara lain, Refraktor Ganda Zeiss, Schmidt Bimasakti, Refraktor
                   Bamberg, Cassegrain GOTO, dan Teleskop Surya. Refraktor Ganda Zeiss adalah jenis teleskop
                   terbesar untuk meneropong bintang. Benda ini diletakkan pada atap kubah sehingga saat teropong
@@ -101,11 +95,39 @@
                   tanpa tiket. Namun, bagi yang ingin menggunakan teleskop Zeiss, wajib mendaftarkan diri. Untuk
                   instansi atau lembaga pendidikan, diberikan jadwal hari Selasa sampai Jumat. Sementara itu,
                   kunjungan individu dibuka setiap hari Sabtu.</p>
-            </section>
+            </article>
 
-            <section>
+            <article>
+               <div class="container card">
+                  <div class="left-content">
+                     <p style="font-weight: bold;">comming soon content</p>
+                  </div>
+                  <div class="center-content">
+                     <p style="font-weight: bold;">comming soon content</p>
+                  </div>
+                  <div class="right-content">
+                     <p style="font-weight: bold;">comming soon content</p>
+                  </div>
+               </div>
+            </article>
+
+            <article>
+               <div class="container flex">
+                  <div class="box box1">
+                     <p>halo 1</p>
+                  </div>
+                  <div class="box box2">
+                     <p>halo 2</p>
+                  </div>
+                  <div class="box box3">
+                     <p>halo 3</p>
+                  </div>
+               </div>
+            </article>
+            
+            <article id="tabel-data" class="card">
                <h2>Data Singkat Kota Bandung</h2>
-               <table border="1">
+               <table border="1" class="tabel">
                   <tr> <!-- tabel header -->
                      <th>Aspek</th>
                      <th>Data</th>
@@ -131,34 +153,58 @@
                      <td>022</td>
                   </tr>
                </table>
-            </section>
-
-            <section>
-               <h3>Ikuti laman ini? Daftar disini! </h3>
+            </article>
+            
+            <article id="registrasi" class="card">
+               <h2>Ikuti laman ini? Daftar disini! </h2>
                <form action="/submit-daftar" method="post">
-                  <label for="username">Username:</label><br>
+                  <label for="username" style="font-weight: bold">Username:</label><br>
                   <input type="text" id="username" name="username" placeholder="akunmu@gmail.com" required><br><br>
-                  <label for="password">Password:</label><br>
+                  <label for="password" style="font-weight: bold">Password:</label><br>
                   <input type="password" id="password" name="password" placeholder="*******" required><br><br>
-                  <label for="date">Tanggal Daftar:</label><br>
+                  <label for="date" style="font-weight: bold;">Tanggal Daftar:</label><br>
                   <input type="date" id="date" name="date" required><br><br>
-                  <input type="submit" value="Daftar">
+                  <input type="submit" style="font-weight: bold;" value="Daftar">
                </form>
-            </section>
-
-            <section>
-               <p>Hubungi Saya:</p>
+            </article>
+            
+            <article id="contact" class="card">
+               <h2>Hubungi Saya:</h2>
                <ul>
-                  <li><a href="mailto:contact@dicoding.com"> <span class="contact-person">Email Dicoding</span></a></li>
-                  <li><a href="https://www.dicoding.com"><span class="contact-person">Website Dicoding</span></a></li>
+                  <li><a href="mailto:contact@dicoding.com"> <span class="contact-person">Email Dicoding</span></a></li><br>
+                  <li><a href="https://www.dicoding.com"><span class="contact-person">Website Dicoding</span></a></li><br>
                   <li><a href="tel:+62212345678"><span class="contact-person">Telepon Dicoding</span></a></li>
                </ul>
-            </section>
-         </article>
-      </aside>
-   </body>
+            </article>
+            
+            <article>
+               <blockquote style="text-align: center;">
+                  <strong>
+                     Tidak ada hasil yang menghianati usaha keras. Meskipun datangnya lama, kau tetap akan mendapatkannya.
+                  </strong> 
+               </blockquote>
+            </article>
+         </div>
+         
+         <aside>
+            <article>   
+               <header class="profile card">
+                  <h2>Kota Bandung</h2>
+                  <p>Kota Kembang Paris van Java</p>
+                  <figure>
+                     <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Lambang_Kota_Bandung.svg/2409px-Lambang_Kota_Bandung.svg.png"
+                        alt="Lambang Kota Bandung" width="300px">
+                     <figcaption>Lambang</figcaption>
+                  </figure>
+               </header>
+            </article>
+         </aside>
+      </main>
 
-   <footer>
-      <p>Copyright &copy; 2026 Dicoding</p>
-   </footer>
+      <footer>
+         <p>Copyright &copy; 2026 Dicoding</p>
+      </footer>
+
+   </body>
 </html>
