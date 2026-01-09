@@ -7,3 +7,26 @@ body {
   margin-left: 10px;
   border: 1px solid red;
 }
+
+/* edit position header hero */
+header {
+  display: flex;
+  justify-content: center;
+  align-item: center;
+}
+
+.hero {
+  text-align: center;
+  max-width: 800px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact a {
+  text-decoration: none;
+}
