@@ -31,6 +31,10 @@ address.contact {
   text-decoration: none;
 }
 
+.contact a:hover {
+  color: red;
+}
+
 /* edit main content */
 /* 
 section.academic {
