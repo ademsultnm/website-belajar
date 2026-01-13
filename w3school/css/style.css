@@ -2,8 +2,13 @@
   border-sizing: border box;
 }
 
-header .navbar-container {
-  padding: 24px;
+body {
+}
+
+header.header-content {
+  padding: 100%;
+  background-color: green;
+  width: 300px;
+  margin: 0 auto;
   text-align: center;
-  justify-content: center;
 }

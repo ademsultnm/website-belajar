@@ -1,7 +1,40 @@
 * {
-  border-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* style index.html */
+header.navbar-container {
+  width: 100%;
+  max-wdith: 1200px;
+  padding-block: 1rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 9999;
+
+  border: 1px solid red;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: ;
+}
+
+.navbar-logo img {
+  width: 60px;
+}
+
+header.navbar-container nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* style cv.html */
 .parent {
   width: 800px;
   margin: 0 auto;
