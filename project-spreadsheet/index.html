@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registrasi Akun</title>
+   <style>
+      body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         background-color: #f4f7f6;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+      }
+
+      .container {
+         background: #fff;
+         padding: 30px;
+         border-radius: 8px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+         width: 350px;
+      }
+
+      h2 {
+         text-align: center;
+         color: #333;
+         margin-bottom: 20px;
+      }
+
+      .form-group {
+         margin-bottom: 15px;
+      }
+
+      label {
+         display: block;
+         margin-bottom: 5px;
+         font-weight: bold;
+         font-size: 14px;
+      }
+
+      input {
+         width: 100%;
+         padding: 10px;
+         border: 1px solid #ddd;
+         border-radius: 4px;
+         box-sizing: border-box;
+      }
+
+      .row {
+         display: flex;
+         gap: 10px;
+      }
+
+      button {
+         width: 100%;
+         padding: 12px;
+         background-color: #28a745;
+         border: none;
+         color: white;
+         border-radius: 4px;
+         cursor: pointer;
+         font-size: 16px;
+         margin-top: 10px;
+      }
+
+      button:hover {
+         background-color: #218838;
+      }
+
+      button:disabled {
+         background-color: #ccc;
+         cursor: not-allowed;
+      }
+   </style>
+</head>
+
+<body>
+
+   <div class="container">
+      <h2>Registrasi</h2>
+
+      <form id="regForm"
+         action="https://script.google.com/macros/s/AKfycbySSwli-oyhlsfw6ISRt7erVdUIAgCxgROd4OhXSV_QjzkslhNlYOs5siaQZPiz4J-Ibw/exec"
+         method="POST" target="hidden_iframe">
+
+         <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" name="nama" required placeholder="Joni Doe">
+         </div>
+         <div class="form-group">
+            <label>Tempat, Tanggal Lahir</label>
+            <div class="row">
+               <input type="text" name="tempat_lahir" required placeholder="Jakarta">
+               <input type="date" name="tanggal_lahir" required>
+            </div>
+         </div>
+         <div class="form-group">
+            <label>Username Account</label>
+            <input type="text" name="username" required placeholder="jonid">
+         </div>
+         <div class="form-group">
+            <label>Password Account</label>
+            <input type="password" name="password" required placeholder="********">
+         </div>
+         <button type="submit" id="submitBtn">Daftar Sekarang</button>
+         <p id="notif" style="text-align: center; margin-top: 15px; font-weight: bold; display: none;"></p>
+      </form>
+
+      <script type="text/javascript">var submitted = false;</script>
+      <!-- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+         onload="if(submitted) {alert('Data Berhasil Terkirim!'); window.location.reload();}"></iframe> -->
+
+         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleResponse()"></iframe>
+   </div>
+
+   <script>
+      // const form = document.getElementById('regForm');
+      // const btn = document.getElementById('submitBtn');
+
+      // // PERUBAHAN 3: Kita tidak pakai fetch lagi, cukup handle status tombol
+      // form.onsubmit = function () {
+      //    submitted = true; // Flag untuk memicu alert di iframe onload
+      //    btn.disabled = true;
+      //    btn.innerText = "Processing...";
+      //    return true; // Biarkan form submit secara natural ke action URL
+      // };
+
+      // versi ke - 2
+      const form = document.getElementById('regForm');
+      const btn = document.getElementById('submitBtn');
+      const notif = document.getElementById('notif');
+
+      // script tambahan untuk reset notifikasi
+      form.onsubmit = function () {
+         submitted = true; // Flag untuk memicu alert di iframe onload
+         btn.disabled = true;
+         btn.innerText = "Processing...";
+         notif.style.display = 'none'; // Sembunyikan notifikasi saat submit baru
+         return true; // Biarkan form submit secara natural ke action URL
+      };
+
+      // menampilkan pesan sukses dibawah tombol
+      function handleResponse() {
+         if (submitted) {
+            // Ganti alert dengan teks di bawah button
+            notif.innerText = "Pendaftaran sukses!";
+            notif.style.color = "#28a745"; // Hijau
+            notif.style.display = "block";
+
+            // Kembalikan status tombol
+            btn.disabled = false;
+            btn.innerText = "Daftar Sekarang";
+
+            // Reset Form agar kolom kosong kembali
+            form.reset();
+
+            // Set submitted kembali ke false agar tidak muncul notif double jika iframe refresh
+            submitted = false;
+         }
+      }
+   </script>
+
+</body>
+
+</html>
